@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   Clipboard,
   Camera,
-  Dumbbell,
   MapPin,
   MessageCircle,
   School,
@@ -16,7 +15,6 @@ import {
   Shield,
   Sparkles,
   Target,
-  Trophy,
   Users,
 } from "lucide-react";
 
@@ -195,11 +193,19 @@ export default function Home() {
                   <p className="text-sm font-bold uppercase text-lime-300">Coach</p>
                   <p className="text-3xl font-black">Sebastian</p>
                 </div>
-                <Trophy className="h-12 w-12 text-orange-400" />
+                <img
+                  src="/sba-logo.png"
+                  alt="SBA Shark Basketball Academy logo"
+                  className="h-12 w-12 rounded-full border border-orange-300/40 bg-black object-contain shadow-lg shadow-orange-500/20 sm:h-14 sm:w-14"
+                />
               </div>
 
-              <div className="mx-auto grid h-44 w-44 place-items-center rounded-full border-4 border-black bg-orange-500 text-black shadow-2xl shadow-orange-500/35">
-                <Dumbbell className="h-20 w-20" />
+              <div className="mx-auto grid h-44 w-44 place-items-center rounded-full border-4 border-black bg-orange-500 p-2 shadow-2xl shadow-orange-500/35 sm:h-52 sm:w-52">
+                <img
+                  src="/sba-logo.png"
+                  alt="SBA Shark Basketball Academy logo"
+                  className="h-full w-full rounded-full bg-black object-contain"
+                />
               </div>
 
               <div className="rounded-md border border-white/10 bg-[#080b10]/85 p-5">
