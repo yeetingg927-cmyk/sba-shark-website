@@ -44,6 +44,56 @@ export const programs = [
   },
 ];
 
+export const coachingSections = [
+  {
+    id: "kids",
+    title: "Kids Basketball Training",
+    description:
+      "Fun training clips, mini games, teamwork moments, and beginner-friendly basketball habits.",
+    videos: [
+      {
+        title: "Kids Mini Game Training",
+        src: "/videos/kids/kids-mini-game.mp4",
+        description:
+          "Kids enjoying a mini game while building confidence, teamwork, and ball control.",
+      },
+      {
+        title: "Kids Play Tag Drill",
+        src: "/videos/kids/kids-playtag.mp4",
+        description:
+          "A fun movement game that helps young players improve speed, reactions, awareness, and confidence.",
+      },
+      {
+        title: "Kids Throwing Balls Drill",
+        src: "/videos/kids/kids-throwing%20balls.mp4",
+        description:
+          "Kids learning coordination, timing, teamwork, and focus through an active ball game.",
+      },
+    ],
+  },
+  {
+    id: "teens",
+    title: "Teen Player Development",
+    description:
+      "Skill work, footwork, decision-making, and game confidence for teen players.",
+    videos: [],
+  },
+  {
+    id: "school",
+    title: "School Team Training",
+    description:
+      "Team training clips for communication, spacing, defense, and match preparation.",
+    videos: [],
+  },
+  {
+    id: "private",
+    title: "Private & Small Group Sessions",
+    description:
+      "Focused coaching clips for personal feedback, extra repetitions, and specific skill work.",
+    videos: [],
+  },
+];
+
 export const locations = [
   "Sunshine Mall, Air Itam, Penang",
   "Queensbay, Penang - World Hoops",

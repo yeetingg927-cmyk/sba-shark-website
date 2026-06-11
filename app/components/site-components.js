@@ -29,7 +29,6 @@ import {
 
 const programIcons = [Sparkles, Target, School, Users];
 const kidsProgressPhoto = "/Eco-Horizon%20Clubhouse%20Kids%201.jpeg";
-const kidsMiniGameVideo = "/kids-mini-game.mp4";
 
 const movementSkills = [
   {
@@ -522,27 +521,6 @@ export function ProgramGrid({ detailed = false }) {
                       alt="Kids basketball coaching progress at Eco Horizon Clubhouse"
                       className="h-48 w-full rounded-md border border-white/10 object-cover object-[center_58%]"
                     />
-                    <div className="overflow-hidden rounded-md border border-[#155EEF]/25 bg-[#05070D]">
-                      <video
-                        src={kidsMiniGameVideo}
-                        poster={kidsProgressPhoto}
-                        controls
-                        playsInline
-                        preload="metadata"
-                        className="aspect-video w-full bg-[#05070D] object-cover"
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                      <div className="border-t border-white/10 bg-[#081426] p-3">
-                        <p className="text-xs font-black uppercase text-[#E10600]">
-                          Mini game training moment
-                        </p>
-                        <p className="mt-1 text-sm leading-6 text-[#C7D2E5]">
-                          Kids build confidence while having fun, competing, and
-                          learning teamwork through mini games.
-                        </p>
-                      </div>
-                    </div>
                   </div>
                 )}
                 <Icon className="h-9 w-9 text-[#E10600]" />
@@ -557,6 +535,15 @@ export function ProgramGrid({ detailed = false }) {
                       </li>
                     ))}
                   </ul>
+                )}
+                {program.title === "Kids Basketball Training" && (
+                  <Link
+                    href="/coaching#kids"
+                    className="mt-5 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-[#155EEF] px-4 py-3 text-sm font-black uppercase text-white transition hover:bg-[#0B3D91] focus:outline-none focus:ring-2 focus:ring-[#155EEF]/40"
+                  >
+                    See more
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
                 )}
               </div>
             );
