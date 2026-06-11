@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, PlayCircle } from "lucide-react";
-import { coachingSections } from "../site-data";
+import { ArrowRight, Camera, PlayCircle } from "lucide-react";
+import { coachingSections, instagramUrl } from "../site-data";
 import { FinalCta, PageHero } from "../components/site-components";
 
 export default function CoachingPage() {
@@ -55,13 +55,24 @@ export default function CoachingPage() {
                       {section.description}
                     </p>
                   </div>
-                  <Link
-                    href="/book"
-                    className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-md bg-[#E10600] px-5 py-3 font-black uppercase text-white transition hover:bg-[#C40000]"
-                  >
-                    Enquire training
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+                    <Link
+                      href="/book"
+                      className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-md bg-[#E10600] px-5 py-3 font-black uppercase text-white transition hover:bg-[#C40000]"
+                    >
+                      Enquire training
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                    <a
+                      href={instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-md border border-[#155EEF]/45 bg-[#05070D] px-5 py-3 font-black uppercase text-white transition hover:border-[#E10600]/60 hover:bg-[#081426]"
+                    >
+                      <Camera className="h-4 w-4" />
+                      Explore more in SBA Instagram
+                    </a>
+                  </div>
                 </div>
 
                 {section.videos.length > 0 ? (
