@@ -5,11 +5,11 @@ export const programs = [
   {
     title: "Kids Basketball Training",
     description:
-      "Structured coaching for younger players and beginners who want to build confidence, coordination, ball control, teamwork, and basic basketball fundamentals.",
+      "Structured coaching for younger players and beginners who want to build confidence, coordination, ball control, teamwork, and basic basketball fundamentals while having fun through active drills and mini games.",
     learn: [
       "Dribbling, passing, catching, and layup basics",
       "Footwork, balance, coordination, and body control",
-      "Listening habits, teamwork, and confidence in group drills",
+      "Listening habits, teamwork, mini games, and confidence in group drills",
     ],
   },
   {

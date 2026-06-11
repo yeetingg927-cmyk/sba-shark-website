@@ -28,6 +28,8 @@ import {
 } from "../site-data";
 
 const programIcons = [Sparkles, Target, School, Users];
+const kidsProgressPhoto = "/Eco-Horizon%20Clubhouse%20Kids%201.jpeg";
+const kidsMiniGameVideo = "/kids-mini-game.mp4";
 
 const movementSkills = [
   {
@@ -345,6 +347,22 @@ export function AboutSection() {
             For parents looking for trusted basketball coaching for their child,
             SBA focuses on young players, school teams, and small group development.
           </p>
+          <div className="mt-8 overflow-hidden rounded-lg border border-white/10 bg-[#0D1F3D] shadow-2xl shadow-[#155EEF]/10">
+            <img
+              src={kidsProgressPhoto}
+              alt="Kids at Eco Horizon Clubhouse basketball training"
+              className="h-80 w-full object-cover object-[center_58%] sm:h-96 lg:h-[460px]"
+            />
+            <div className="border-t border-white/10 bg-[#05070D]/80 p-4">
+              <p className="text-sm font-black uppercase text-[#E10600]">
+                Coaching progress in action
+              </p>
+              <p className="mt-2 leading-7 text-[#C7D2E5]">
+                Young players building confidence, teamwork, and basketball habits
+                through SBA training.
+              </p>
+            </div>
+          </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {audienceCards.map((card) => (
@@ -497,6 +515,36 @@ export function ProgramGrid({ detailed = false }) {
                 key={program.title}
                 className="rounded-lg border border-white/10 bg-[#0D1F3D] p-5 transition hover:border-[#155EEF]/55 hover:bg-[#0B3D91]/55"
               >
+                {program.title === "Kids Basketball Training" && (
+                  <div className="mb-5 space-y-4">
+                    <img
+                      src={kidsProgressPhoto}
+                      alt="Kids basketball coaching progress at Eco Horizon Clubhouse"
+                      className="h-48 w-full rounded-md border border-white/10 object-cover object-[center_58%]"
+                    />
+                    <div className="overflow-hidden rounded-md border border-[#155EEF]/25 bg-[#05070D]">
+                      <video
+                        src={kidsMiniGameVideo}
+                        poster={kidsProgressPhoto}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className="aspect-video w-full bg-[#05070D] object-cover"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                      <div className="border-t border-white/10 bg-[#081426] p-3">
+                        <p className="text-xs font-black uppercase text-[#E10600]">
+                          Mini game training moment
+                        </p>
+                        <p className="mt-1 text-sm leading-6 text-[#C7D2E5]">
+                          Kids build confidence while having fun, competing, and
+                          learning teamwork through mini games.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <Icon className="h-9 w-9 text-[#E10600]" />
                 <h3 className="mt-5 text-xl font-black text-white">{program.title}</h3>
                 <p className="mt-3 leading-7 text-[#C7D2E5]">{program.description}</p>
