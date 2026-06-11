@@ -5,7 +5,7 @@ export const programs = [
   {
     title: "Kids Basketball Training",
     description:
-      "Fun fundamentals, coordination, confidence, teamwork, and safe skill habits for young players.",
+      "Structured coaching for younger players and beginners who want to build confidence, coordination, ball control, teamwork, and basic basketball fundamentals.",
     learn: [
       "Dribbling, passing, catching, and layup basics",
       "Footwork, balance, coordination, and body control",
@@ -15,7 +15,7 @@ export const programs = [
   {
     title: "Teen Player Development",
     description:
-      "Sharper handles, footwork, finishing, shooting rhythm, defense, and game decision-making.",
+      "Focused training for teenagers who want stronger skills, better decision-making, sharper footwork, improved shooting, and more game confidence.",
     learn: [
       "Advanced ball handling under pressure",
       "Shooting form, finishing angles, and footwork",
@@ -25,7 +25,7 @@ export const programs = [
   {
     title: "School Team Training",
     description:
-      "Structured group sessions for school squads that need discipline, systems, and match readiness.",
+      "Organized team training for schools that need better communication, spacing, discipline, defense, transition habits, and match preparation.",
     learn: [
       "Team communication, spacing, and transition habits",
       "Defensive effort, rotations, and rebounding discipline",
@@ -35,7 +35,7 @@ export const programs = [
   {
     title: "Private & Small Group Sessions",
     description:
-      "Focused coaching for players who want extra reps, personal feedback, and faster improvement.",
+      "More focused coaching for players who want personal feedback, extra repetitions, and specific skill development.",
     learn: [
       "Personal corrections for shooting, dribbling, and finishing",
       "Small-group competitive drills with more touches",

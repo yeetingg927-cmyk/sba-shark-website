@@ -29,6 +29,49 @@ import {
 
 const programIcons = [Sparkles, Target, School, Users];
 
+const movementSkills = [
+  {
+    name: "Ball Handling",
+    description:
+      "Control the ball with both hands, protect it from defenders, and build confidence while moving.",
+  },
+  {
+    name: "Shooting Form",
+    description:
+      "Build better balance, hand position, rhythm, and follow-through for more consistent shooting habits.",
+  },
+  {
+    name: "Layup Footwork",
+    description:
+      "Learn correct steps, body control, and finishing habits near the basket.",
+  },
+  {
+    name: "Passing & Teamwork",
+    description:
+      "Improve passing accuracy, timing, communication, and movement with teammates.",
+  },
+  {
+    name: "Defensive Slides",
+    description:
+      "Develop defensive stance, footwork, balance, and effort to stay in front of the attacker.",
+  },
+  {
+    name: "Triple Threat & Pivoting",
+    description:
+      "Learn how to protect the ball and stay ready to pass, shoot, or drive.",
+  },
+  {
+    name: "Cutting & Spacing",
+    description:
+      "Understand how to move without the ball, create space, and make better game decisions.",
+  },
+  {
+    name: "Game IQ",
+    description:
+      "Learn when to pass, shoot, drive, defend, and make smarter choices during play.",
+  },
+];
+
 export function SiteFrame({ children }) {
   return (
     <main className="min-h-screen overflow-hidden bg-[#05070D] text-white">
@@ -107,7 +150,7 @@ export function Navbar() {
 
 export function HeroSection() {
   return (
-    <section className="relative isolate flex min-h-screen items-center px-5 py-24 sm:px-8 lg:px-12">
+    <section className="relative isolate flex min-h-screen items-start px-5 pb-16 pt-28 sm:px-8 lg:items-center lg:px-12 lg:py-24">
       <SportBackground />
       <div className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div
@@ -120,27 +163,41 @@ export function HeroSection() {
             Penang basketball training with Coach Sebastian
           </div>
 
-          <h1 className="max-w-4xl text-5xl font-black uppercase leading-[0.95] tracking-normal text-white sm:text-6xl lg:text-7xl">
-            SBA Shark Basketball Academy
+          <div className="mb-5 flex items-center gap-3">
+            <img
+              src="/sba-logo.png"
+              alt="SBA Shark Basketball Academy logo"
+              className="h-14 w-14 rounded-full border border-[#E10600]/45 bg-[#05070D] object-contain shadow-xl shadow-[#155EEF]/20"
+            />
+            <div>
+              <p className="text-sm font-black uppercase text-[#E10600]">
+                SBA Shark Basketball Academy
+              </p>
+              <p className="text-sm font-bold text-[#C7D2E5]">Coach Sebastian</p>
+            </div>
+          </div>
+
+          <h1 className="max-w-4xl text-5xl font-black uppercase leading-[0.92] tracking-normal text-white sm:text-6xl lg:text-7xl">
+            DOMINATE LIKE A SHARK.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#C7D2E5] sm:text-xl">
             Confident skills, sharper fundamentals, and game-ready habits for kids,
-            teenagers, parents, and school teams across Penang.
+            teenagers, school teams, and private groups across Penang.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <InstagramButton />
             <Link
-              href="/book"
+              href="/programs"
               className="inline-flex min-h-14 items-center justify-center gap-3 rounded-md border border-white/15 bg-[#0D1F3D] px-6 py-4 text-base font-bold text-white transition hover:border-[#155EEF]/60 hover:bg-[#0B3D91]/60 focus:outline-none focus:ring-2 focus:ring-[#155EEF]/40"
             >
-              Create enquiry message
+              View Programs
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold text-[#C7D2E5]">
-            {["Kids", "Teenagers", "Parents", "Schools"].map((audience) => (
+            {["Kids", "Teenagers", "School Teams", "Private & Small Groups"].map((audience) => (
               <span
                 key={audience}
                 className="rounded-full border border-[#155EEF]/25 bg-[#0B3D91]/25 px-4 py-2 text-[#C7D2E5]"
@@ -151,7 +208,36 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        <HeroGraphic />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="relative min-h-[420px] overflow-hidden rounded-lg border border-white/10 bg-[#0D1F3D] shadow-2xl shadow-[#155EEF]/20 sm:min-h-[520px] lg:min-h-[640px]"
+        >
+          <img
+            src="/hero-photo.png"
+            alt="Basketball player dunking in an arena"
+            className="absolute inset-0 h-full w-full object-cover object-[42%_center] sm:object-[38%_center] lg:object-center"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,7,13,0.96)_0%,rgba(8,20,38,0.68)_36%,rgba(5,7,13,0.18)_72%),linear-gradient(0deg,rgba(5,7,13,0.88)_0%,rgba(5,7,13,0.08)_45%,rgba(5,7,13,0.55)_100%)] lg:bg-[linear-gradient(90deg,rgba(5,7,13,0.82)_0%,rgba(8,20,38,0.34)_36%,rgba(5,7,13,0.04)_72%),linear-gradient(0deg,rgba(5,7,13,0.72)_0%,rgba(5,7,13,0.05)_45%,rgba(5,7,13,0.35)_100%)]" />
+          <div className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-[#05070D]/72 p-5 backdrop-blur">
+            <div className="flex items-center gap-3">
+              <img
+                src="/sba-logo.png"
+                alt="SBA Shark Basketball Academy logo"
+                className="h-14 w-14 rounded-full border border-[#E10600]/45 bg-[#05070D] object-contain shadow-lg shadow-[#E10600]/20"
+              />
+              <div>
+                <p className="text-sm font-black uppercase text-white">
+                  SBA Shark Basketball Academy
+                </p>
+                <p className="text-sm font-bold text-[#C7D2E5]">
+                  Skills. Confidence. Game habits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -228,27 +314,132 @@ export function PageHero({ label, title, body, children }) {
 }
 
 export function AboutSection() {
+  const audienceCards = [
+    {
+      title: "Kids Basketball Training",
+      body: "Structured coaching for younger players and beginners who want to build confidence, coordination, ball control, teamwork, and basic basketball fundamentals.",
+    },
+    {
+      title: "Teen Player Development",
+      body: "Focused training for teenagers who want stronger skills, better decision-making, sharper footwork, improved shooting, and more game confidence.",
+    },
+    {
+      title: "School Team Training",
+      body: "Organized team training for schools that need better communication, spacing, discipline, defense, transition habits, and match preparation.",
+    },
+    {
+      title: "Private & Small Group Sessions",
+      body: "More focused coaching for players who want personal feedback, extra repetitions, and specific skill development.",
+    },
+  ];
+
   return (
     <section className="border-y border-white/10 bg-[#081426] px-5 py-16 sm:px-8 lg:px-12">
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.78fr_1.22fr]">
         <div>
           <p className="text-sm font-black uppercase text-[#155EEF]">About</p>
           <h2 className="mt-3 text-3xl font-black uppercase text-white sm:text-4xl">
-            Basketball coaching for families and schools
+            Basketball Coaching for Young Players and Teams
           </h2>
+          <p className="mt-5 leading-8 text-[#C7D2E5]">
+            For parents looking for trusted basketball coaching for their child,
+            SBA focuses on young players, school teams, and small group development.
+          </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-3">
-          {["Parents", "Kids and teenagers", "Schools"].map((item) => (
-            <div key={item} className="rounded-lg border border-white/10 bg-[#0D1F3D] p-5">
-              <p className="font-black text-white">{item}</p>
-              <p className="mt-3 leading-7 text-[#C7D2E5]">
-                Training with Coach Sebastian focuses on clear habits, confidence, and
-                visible progress after each coaching block.
-              </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {audienceCards.map((card) => (
+            <div key={card.title} className="rounded-lg border border-white/10 bg-[#0D1F3D] p-5">
+              <p className="font-black text-white">{card.title}</p>
+              <p className="mt-3 leading-7 text-[#C7D2E5]">{card.body}</p>
             </div>
           ))}
         </div>
       </div>
+    </section>
+  );
+}
+
+export function LearnMovementSection() {
+  const [selectedSkill, setSelectedSkill] = useState(null);
+
+  return (
+    <section className="border-y border-white/10 bg-[#05070D] px-5 py-16 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="max-w-4xl">
+          <p className="text-sm font-black uppercase text-[#E10600]">Learn the Movement</p>
+          <h2 className="mt-3 text-3xl font-black uppercase text-white sm:text-4xl">
+            Learn the Movement
+          </h2>
+          <p className="mt-5 leading-8 text-[#C7D2E5]">
+            See the basic skills, footwork, and game habits young players develop
+            through SBA training. Animation previews will be added soon.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {movementSkills.map((skill) => (
+            <article
+              key={skill.name}
+              className="rounded-lg border border-white/10 bg-[#0D1F3D] p-5 transition hover:border-[#155EEF]/55 hover:bg-[#0B3D91]/45"
+            >
+              <div className="relative grid aspect-video place-items-center overflow-hidden rounded-md border border-dashed border-[#155EEF]/45 bg-[#081426]">
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(21,94,239,0.18),rgba(225,6,0,0.16))]" />
+                <div className="relative text-center">
+                  <Target className="mx-auto h-9 w-9 text-[#F97316]" />
+                  <p className="mt-2 text-xs font-black uppercase text-[#C7D2E5]">
+                    Animation preview
+                  </p>
+                  <p className="text-xs text-[#7F91B0]">Coming soon</p>
+                </div>
+              </div>
+
+              <h3 className="mt-5 text-xl font-black text-white">{skill.name}</h3>
+              <p className="mt-3 leading-7 text-[#C7D2E5]">{skill.description}</p>
+              <button
+                type="button"
+                onClick={() => setSelectedSkill(skill)}
+                className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-md bg-[#E10600] px-4 py-3 font-black uppercase text-white transition hover:bg-[#C40000] focus:outline-none focus:ring-2 focus:ring-[#E10600]/40"
+              >
+                View Movement
+              </button>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      {selectedSkill && (
+        <div className="fixed inset-0 z-[80] grid place-items-center bg-[#05070D]/85 px-5 backdrop-blur">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="movement-modal-title"
+            className="w-full max-w-lg rounded-lg border border-white/10 bg-[#0D1F3D] p-6 shadow-2xl shadow-[#155EEF]/20"
+          >
+            <p className="text-sm font-black uppercase text-[#E10600]">
+              Animation coming soon
+            </p>
+            <h3
+              id="movement-modal-title"
+              className="mt-3 text-3xl font-black uppercase text-white"
+            >
+              {selectedSkill.name}
+            </h3>
+            <div className="mt-5 grid min-h-36 place-items-center rounded-md border border-dashed border-[#155EEF]/45 bg-[#081426] p-5 text-center">
+              <p className="max-w-sm leading-8 text-[#C7D2E5]">
+                Animation tutorial coming soon. SBA will add visual movement guides
+                here to help players understand this skill step by step.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setSelectedSkill(null)}
+              className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-[#155EEF] px-5 py-3 font-black uppercase text-white transition hover:bg-[#0B3D91] focus:outline-none focus:ring-2 focus:ring-[#155EEF]/40"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -295,7 +486,7 @@ export function ProgramGrid({ detailed = false }) {
       <div className="mx-auto max-w-7xl">
         <SectionIntro
           label="Programs"
-          title="Training built for real players and busy families"
+          title="Training built for young players and teams"
           body="Choose a program that fits the player's age, goals, and training environment."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
